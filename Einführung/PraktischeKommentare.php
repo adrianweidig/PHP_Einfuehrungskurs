@@ -31,14 +31,6 @@ Zum Beispiel eine kurze Beschreibung des Codes oder Erklärungen zu bestimmten F
  * @return int Die Summe der beiden Zahlen.
  */
 function addNumbers($a, $b) {
-    // Führt die Addition durch
-    $sum = $a + $b;
-
-    // Gibt die Summe zurück
-    return $sum;
+    return $a + $b;
 }
-
-// Verwendung der Funktion
-$result = addNumbers(5, 10);
-echo "Das Ergebnis ist: " . $result;
 ?>
