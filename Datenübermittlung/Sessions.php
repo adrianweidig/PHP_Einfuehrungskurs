@@ -1,4 +1,16 @@
 <?php
+
+// Die Verwendung von Session-Variablen erfordert das Neuladen der Seite, um Änderungen sichtbar zu machen.
+// Die Session-Daten werden serverseitig gespeichert und anhand der Session-ID abgerufen.
+// Wenn eine Session-Variable geändert wird, wird der neue Wert auf dem Server gespeichert.
+// Beim Neuladen der Seite werden die aktuellen Session-Daten anhand der Session-ID abgerufen und verwendet.
+// Das Neuladen der Seite ermöglicht es dem Browser, eine neue Anfrage an den Server zu senden und die aktuellen Session-Daten zu erhalten.
+// Die Session-ID wird über einen Cookie oder als Teil der URL übertragen, um die Sitzung zu identifizieren.
+// Durch das Neuladen der Seite wird sichergestellt, dass der Browser die aktuelle Session-ID verwendet und die aktualisierten Session-Daten erhält.
+// PHP bietet keine automatische Aktualisierung der Seite bei Änderungen der Session-Daten.
+// Das Neuladen der Seite ist der Mechanismus, um die aktuellen Session-Daten abzurufen und anzuzeigen.
+
+
 session_start();
 
 // Beispiel 1: Session-Variable setzen, falls nicht bereits gesetzt
