@@ -130,7 +130,7 @@ set_error_handler(function($errno, $errstr) {
 });
 
 try {
-    echo $meinKlasse->str_name . "<br>\n";
+    echo $meinKlasse->$str_name . "<br>\n";
 } catch (Error $e) {
     echo "Fehler: " . $e->getMessage() . "<br>\n";
 }
