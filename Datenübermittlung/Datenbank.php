@@ -54,6 +54,22 @@
 // mysqli_close($con_verbindung);
 
 
+// Fehlercodes:
+// 1044: Der Benutzer hat keine ausreichenden Berechtigungen, um auf die Datenbank zuzugreifen.
+// 1045: Der Benutzername oder das Passwort für die Datenbankverbindung ist falsch.
+// 1062: Ein eindeutiger Schlüsselverstoß ist aufgetreten, z.B. beim Versuch, einen Datensatz einzufügen, der bereits existiert.
+// 1064: Die SQL-Abfrage weist einen Syntaxfehler auf.
+// 1146: Die angegebene Tabelle existiert nicht in der Datenbank.
+// 1241: Fehler bei der Ausführung einer vorbereiteten SQL-Abfrage aufgrund eines Parameterfehlers.
+// 1242: Fehler bei der Ausführung einer SQL-Abfrage aufgrund einer Unterabfrage, die mehrere Zeilen zurückgibt.
+// 1364: Fehler bei der Einfügung von Daten in eine Spalte, die als NOT NULL deklariert ist, aber keinen Wert erhalten hat.
+// 1451: Ein Fremdschlüsselverstoß ist aufgetreten, z.B. beim Versuch, einen Datensatz zu löschen, der von anderen Tabellen referenziert wird.
+// 2002: Es konnte keine Verbindung zum MySQL-Server hergestellt werden.
+// 2003: Der MySQL-Server wurde nicht gefunden.
+// 2006: Die Verbindung zum MySQL-Server wurde unerwartet während der Kommunikation unterbrochen.
+// 2013: Die Verbindung zum MySQL-Server wurde wegen einer zu langen Inaktivitätszeit abgebrochen.
+
+
 // Beispiel 1: Verbindung zur Datenbank herstellen
 echo "<h2>Beispiel 1: Verbindung zur Datenbank herstellen</h2>";
 
@@ -78,6 +94,7 @@ $str_tabelle = "CREATE TABLE IF NOT EXISTS benutzer (
     email VARCHAR(100) NOT NULL
 )";
 
+// Liefert true, wenn erfolgreich
 $res_erstellen = mysqli_query($con_verbindung, $str_tabelle);
 
 if ($res_erstellen) {
@@ -218,6 +235,7 @@ $check_email_query_2 = "SELECT COUNT(*) FROM benutzer WHERE email = 'anna@exampl
 $check_email_result_1 = mysqli_query($con_verbindung, $check_email_query_1);
 $check_email_result_2 = mysqli_query($con_verbindung, $check_email_query_2);
 
+// Wenn mysqli_fetch_array an Stelle [0] == 0, dann wurden keine Datensätze zurückgeliefert
 $row_1 = mysqli_fetch_array($check_email_result_1);
 $row_2 = mysqli_fetch_array($check_email_result_2);
 
