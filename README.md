@@ -1,6 +1,6 @@
 # PHP-Einführungskurs
 
-Willkommen zum PHP-Einführungskurs! Dieser Kurs bietet eine grundlegende Einführung in die PHP-Programmierung.
+Git-Repo dient zum Abgleich eigener Lösungen und zukünftiger Wiederholung und persönlicher Retrospektive.
 
 ## Inhalte
 
