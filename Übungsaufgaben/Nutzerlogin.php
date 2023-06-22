@@ -83,7 +83,9 @@ if (isset($_POST['loeschen'])) {
             <input type="text" name="nachname" id="nachname" required>
             <br>
             <label for="geburtstag">Geburtstag:</label>
-            <input type="date" name="geburtstag" id="geburtstag" required>
+
+            
+            <input type="date" min="<?php echo date('Y-m-d', strtotime('-70 years')); ?>" max="<?php echo date('Y-m-d', strtotime('-18 years')); ?>" name="geburtstag" id="geburtstag" required>
             <br>
             <input type="submit" name="registrieren" value="Registrieren">
         </form>
