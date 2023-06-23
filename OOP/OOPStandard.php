@@ -35,7 +35,7 @@ class Tier {
     }
 
     public function vorstellen() {
-        echo "Ich bin ein Tier namens " . $this->str_name . " und bin " . $this->int_alter . " Jahre alt.";
+        echo "Ich bin ein Tier namens " . $this->str_name . " und bin " . $this->int_alter . " Jahre alt.<br/>\n";
     }
 }
 
@@ -49,7 +49,7 @@ class Katze extends Tier {
     }
 
     public function schnurren() {
-        echo $this->str_name . " schnurrt.";
+        echo $this->str_name . " schnurrt.<br/>\n";
     }
 }
 
@@ -62,7 +62,7 @@ class Hund extends Tier {
     }
 
     public function bellen() {
-        echo $this->str_name . " bellt.";
+        echo $this->str_name . " bellt.<br/>\n";
     }
 }
 
