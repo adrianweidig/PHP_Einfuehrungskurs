@@ -5,28 +5,13 @@
 // Die Verwendung von __construct:
 
 /**
- * Die Methode __construct ist ein sogenannter Konstruktor. Sie wird automatisch aufgerufen,
- * wenn eine neue Instanz einer Klasse erstellt wird. Der Konstruktor ermöglicht es,
- * initialen Code auszuführen und Eigenschaften einer Klasse mit Werten zu initialisieren.
+ * Die __construct-Funktion wird automatisch aufgerufen, wenn eine neue Instanz einer Klasse erstellt wird.
+ * Er ermöglicht die Ausführung von Initialisierungscode und die Initialisierung von Klasseneigenschaften mit Werten.
  * 
- * In der Regel werden die erforderlichen Parameter im Konstruktor definiert, die dann bei der
- * Instanziierung der Klasse übergeben werden. Der Konstruktor wird dabei mit dem Schlüsselwort
- * "public function __construct()" deklariert und kann optional Parameter entgegennehmen.
+ * Diese wird auch Konstruktor genannt.
  * 
- * Beispiel:
- * 
- * class Beispiel {
- *     private $name;
- * 
- *     public function __construct($name) {
- *         $this->name = $name;
- *     }
- * }
- * 
- * $beispiel = new Beispiel("Hallo");
- * 
- * In diesem Beispiel wird beim Erstellen einer neuen Instanz der Klasse "Beispiel" der Konstruktor
- * aufgerufen und der übergebene Name in der Eigenschaft $name gespeichert.
+ * In der Regel werden die erforderlichen Parameter im Konstruktor definiert und bei der Instanziierung der Klasse übergeben.
+ * Der Konstruktor wird mit dem Schlüsselwort "public function __construct()" deklariert und kann optional Parameter entgegennehmen.
  */
 
 // Die Verwendung von : und -> :
@@ -34,30 +19,10 @@
 /**
  * In der OOP in PHP werden zwei spezielle Operatoren verwendet: ":" und "->".
  * 
- * Der ":"-Operator wird verwendet, um den Zugriff auf Eigenschaften oder Methoden einer Klasse
- * zu deklarieren. Er wird nach dem Namen der Klasse oder des Objekts platziert, gefolgt von
- * dem Namen der Eigenschaft oder Methode.
- * 
- * Beispiel:
- * 
- * class Beispiel {
- *     public $name;
- * 
- *     public function sagHallo() {
- *         echo "Hallo, " . $this->name;
- *     }
- * }
- * 
- * $beispiel = new Beispiel();
- * $beispiel->name = "Max";
- * $beispiel->sagHallo();
- * 
- * In diesem Beispiel wird die Eigenschaft $name des Objekts $beispiel auf "Max" gesetzt und
- * anschließend die Methode "sagHallo()" aufgerufen, um "Hallo, Max" auszugeben.
- * 
  * Der "->"-Operator wird verwendet, um auf Eigenschaften oder Methoden eines Objekts zuzugreifen.
- * Dabei wird das Objekt vor den Operator gestellt, gefolgt vom Namen der Eigenschaft oder Methode.
- * Der "->"-Operator ist somit Teil der Syntax, um auf Objekteigenschaften und -methoden zuzugreifen.
+ * 
+ * Der "::"-Operator wird verwendet, um auf statische Eigenschaften oder Methoden einer Klasse zuzugreifen.
+ * Statische Eigenschaften und Methoden sind an die Klasse selbst gebunden und können direkt über den Klassennamen und den "::"-Operator aufgerufen werden.
  */
 
 class Tier {
@@ -78,6 +43,7 @@ class Katze extends Tier {
     private $str_fellfarbe;
 
     public function __construct($name, $alter, $fellfarbe) {
+        // Hiermit wird also der Konstruktor der Tierklasse aufgerufen
         parent::__construct($name, $alter);
         $this->str_fellfarbe = $fellfarbe;
     }
