@@ -1,5 +1,8 @@
 # PHP-Einführungskurs
 
+> ab 23.06.2023 keine Änderungen mehr - aktueller Freeze-Zustand und keine weitere Bearbeitung
+
+
 Git-Repo dient zum Abgleich eigener Lösungen und zukünftiger Wiederholung und persönlicher Retrospektive.
 
 ## Inhalte
